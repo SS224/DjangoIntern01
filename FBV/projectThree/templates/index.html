@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+     <link rel="stylesheet" href="{% static "styleone.css" %}">
+  </head>
+  <body>
+    <table>
+      <thead>
+        <tr>
+          <th>Product Id</th>
+          <th>Product Name</th>
+          <th>Product Model</th>
+          <th>Product Cost</th>
+        </tr>
+
+        <tbody>
+            {% for p in product %}
+          <tr>
+            <td>{{p.id}}</td>
+            <td>{{p.productBrandName}}</td>
+            <td>{{p.productBrandModel}}</td>
+            <td>{{p.productBrandCost}}</td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </thead>
+    </table>
+  </body>
+</html>
